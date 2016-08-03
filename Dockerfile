@@ -1,7 +1,9 @@
-FROM ubuntu:14.04
+#FROM ubuntu:14.04
+FROM alpine:latest
 MAINTAINER qida
-RUN apt-get update && \
-    apt-get install -y supervisor
+RUN apk add --no-cache --update-cache bash && \
+    apk --update add wget &&\
+    apk add supervisor
 
 CMD [ "/bin/bash" ]
 
