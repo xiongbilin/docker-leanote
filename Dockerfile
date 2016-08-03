@@ -1,5 +1,9 @@
-FROM supervisor:latest
+FROM ubuntu:14.04
 MAINTAINER qida
+RUN apt-get update && \
+    apt-get install -y supervisor
+
+CMD [ "/bin/bash" ]
 
 ADD init.sh /root/init.sh
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
