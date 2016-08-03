@@ -1,4 +1,4 @@
-FROM ljl/supervisor:1.0
+FROM supervisor:latest
 MAINTAINER qida
 
 ADD init.sh /root/init.sh
