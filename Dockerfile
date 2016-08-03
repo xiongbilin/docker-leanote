@@ -4,8 +4,7 @@ MAINTAINER qida
 RUN apk add --no-cache --update-cache bash && \
     apk --update add wget &&\
     apk add supervisor
-
-CMD [ "/bin/bash" ]
+#CMD [ "/bin/bash" ]
 
 ADD init.sh /root/init.sh
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
