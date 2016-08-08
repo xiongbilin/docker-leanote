@@ -1,6 +1,6 @@
-#FROM ubuntu:14.04
+#FROM alpine
 FROM alpine:latest
-MAINTAINER qida
+MAINTAINER xiongbilin
 RUN apk add --no-cache --update-cache bash && \
     apk --update add wget &&\
     apk add supervisor
